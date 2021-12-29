@@ -1,0 +1,29 @@
+services:
+  db:
+    image: postgres:14
+    volumes:
+      - ../../.docker/db/dev/data:/var/lib/postgresql/data:Z
+    environment:
+      - POSTGRES_USER=container_u
+      - POSTGRES_DB=msesuperuser_dev
+      - POSTGRES_HOST_AUTH_METHOD=trust # <=== danger only DEV
+
+  spring_boot:
+    container_name: mse-super-user-spring-boot
+    build:
+      context: ../../
+      dockerfile: ./docker/msesuperuser_dev/spring_boot.Dockerfile
+    user: "${USER_ID}:${USER_GROUP_ID}"
+    ports:
+      - 7081:7080
+    volumes:
+      - ../../.:/opt/source/:Z
+    networks:
+      default:
+      static-network:
+    depends_on:
+      - db
+
+networks:
+  static-network:
+    external: true

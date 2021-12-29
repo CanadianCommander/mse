@@ -1,0 +1,18 @@
+package ca.bbenetti.msesuperuser.api.v1.crud;
+
+import ca.bbenetti.msesuperuser.model.AbstractBaseModel;
+import ca.bbenetti.msesuperuser.transfer.AbstractModelInboundTransfer;
+import ca.bbenetti.msesuperuser.transfer.ApplicationResponse;
+import ca.bbenetti.msesuperuser.transfer.AbstractModelTransfer;
+import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+
+import java.util.UUID;
+
+public interface CRUController<Model extends AbstractBaseModel, Transfer extends AbstractModelTransfer, InboundTransfer extends AbstractModelInboundTransfer>
+		extends CController<Model, Transfer, InboundTransfer>, RController<Model, Transfer, InboundTransfer>, UController<Model, Transfer, InboundTransfer>
+{
+
+}

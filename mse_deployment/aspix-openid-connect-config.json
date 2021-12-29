@@ -1,0 +1,12 @@
+{
+  "brearer_only": true,
+  "client_id": "mse_login",
+  "client_secret": "6KsAtyLpKVyyYQE5fucN9gpDyKGWu1rt",
+  "disable": false,
+  "discovery": "http://keycloak:8080/auth/realms/test_realm/.well-known/openid-configuration",
+  "introspection_endpoint": "http://keycloak:8080/auth/realms/test_realm/protocol/openid-connect/token/introspect",
+  "introspection_endpoint_auth_method": "client_secret_basic",
+  "realm": "test_realm",
+  "redirect_uri": "http://localhost:9080/",
+  "scope": "openid profile"
+}

@@ -1,0 +1,19 @@
+_format_version: "1.1"
+
+services:
+  - name: mse_user
+    host: mse-user-spring-boot
+    port: 7080
+    path: /api/v1/
+    routes:
+    - name: mse-user
+      hosts:
+        - "mse-user"
+  - name: mse_super_user
+    host: mse-super-user-spring-boot
+    port: 7080
+    path: /api/v1/
+    routes:
+    - name: mse-super-user
+      hosts:
+        - "mse-super-user"

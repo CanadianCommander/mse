@@ -1,0 +1,51 @@
+
+# General
+project-human-name:
+  desc: "The name of your project"
+  allow-space: true
+project-name:
+  desc: "Java package name of your project"
+project-package:
+  desc: "Java organization package name for your project. Ex: org.<this value>.projectname"
+project-package-prefix:
+  desc: "Prefix for your package Ex: org"
+  required: false
+  default: "org"
+project-description:
+  desc: "Description of the project"
+  default: "A service"
+  allow-space: true
+container-user:
+  desc: "The container user's name"
+  required: false
+  default: "container_u"
+
+client:
+  # Typescript client
+  ts:
+    package-name:
+      desc: "The name of the ts client npm package"
+    npmrc-registry:
+      desc: ".npmrc registry string. Ex: '@<org>:registry=https://npm.pkg.github.com'"
+      default: "registry=https://registry.npmjs.org"
+
+  # Ruby client
+  ruby:
+    client-key:
+      desc: "gem repo key"
+    repo-url:
+      desc: "Gem repo url"
+      default: "https://rubygems.org"
+    module-name:
+      desc: "Ruby module name for your client (namespace)"
+
+  # Java client
+  java:
+    deployment-repository:
+      desc: "The deployment repository Ex: 'github::default::https://maven.pkg.github.com/<org>/'"
+
+# Openshfit
+openshift:
+  image-path:
+    desc: "The openshift image registry url"
+

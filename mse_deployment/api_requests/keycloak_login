@@ -1,0 +1,10 @@
+curl --request POST \
+  --url http://keycloak:8080/auth/realms/test_realm/protocol/openid-connect/token \
+  --header 'Content-Type: application/x-www-form-urlencoded' \
+  --cookie 'AUTH_SESSION_ID_LEGACY=71a59f09-738f-4633-a789-f86b4facec51.e4f298bffc38; session=OskVhb1KcpoK1TMf9vaPSQ..%7C1640767715%7CV9XL2Kre7MzQBCjNF9d_ioU2uDriI2xJ4rgCE-hRVLOhegXq6es_13IgucIddYtBTls7IPNYpKLgGS-JxSxtdQAbVYYTLdCDDgtYtcyUzmuOM-fkviMFOaP6-2uhCjKz2-K7gZLe4A2QoRKWJs5ooaU7Q7fFQp31HvaAgamz9XqCkT170K2goio2gYL1s0TUyEMcyZtxvtQgRy6waW2XJA..%7CshGKBJoIgpnPFbo-vAF__XA4aJQ.' \
+  --data client_id=mse_login \
+  --data grant_type=password \
+  --data client_secret=6KsAtyLpKVyyYQE5fucN9gpDyKGWu1rt \
+  --data 'scope=openid profile email' \
+  --data username=test_u_super \
+  --data password=test
