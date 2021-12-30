@@ -1,0 +1,9 @@
+{
+  "client_id": "mse_login",
+  "client_secret": "6KsAtyLpKVyyYQE5fucN9gpDyKGWu1rt",
+  "disable": false,
+  "discovery": "http://keycloak:8080/auth/realms/test_realm/.well-known/openid-configuration",
+  "permissions": [
+    "super_user_services"
+  ]
+}
